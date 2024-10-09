@@ -1,0 +1,49 @@
+
+body {
+    font-family: Arial, sans-serif; 
+    margin: 0; 
+    padding: 0;                  /* design for  whole page */
+    background-color: white; 
+    color: black;
+}
+.container {
+    display: flex; 
+    height: 100vh; /* container for layout */
+}
+.sidebar {
+    background-color: red; 
+    color: white; 
+    width: 200px;               /* Sidebar design */
+    padding: 20px; 
+    box-sizing: border-box; 
+    position: fixed; 
+    height: 100%;
+}
+.sidebar ul li {
+    margin-bottom: 20px; /* Adds space below each navigation link */
+}
+.sidebar ul li a {
+    text-decoration: none; 
+    color: white;   /* design for links in the sidebar */
+    font-size: 18px; 
+    display: block; 
+}
+.main-content {
+    margin-left: 220px; 
+    padding: 20px;                /* Main content styling */
+    background-color: white; 
+}
+header h1 {
+    font-size: 36px; 
+    color: blue;     /* design for the header in the main content */
+}
+section {
+    margin-top: 20px; /* Adds space above each section */
+}
+section h2 {
+    color: black; /* Sets the color of section headings to black */
+}
+section p {
+    font-size: 18px;    /* design for paragraphs */
+    line-height: 1.6; 
+}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Makes the website change pages -->
+<link rel="stylesheet" href="style.css">  <!--  external CSS file link -->
+</head>
+<body>
+  <div class="container"> 
+    <nav class="sidebar">     <!-- Sidebar for links -->
+  <ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About</a></li>            <!--  links to other pages  -->
+    <li><a href="contactinfo.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="main-content">
+      <header>
+        <h1>Contact Me</h1> <!--  heading of the Contact page -->
+      </header>
+       <!-- the contact form -->
+      <section>
+        <p>If there is any info you think should be added to the website and any question you have contact me by filling in the boxes below.</p>
+        <div class="form-container">
+          <form id="contact-form"> <!-- Form to fill in and send a message -->
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br> <!-- Text for name -->
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" required></textarea><br><br> <!-- Text box for message-->
+            <button type="submit">Send</button> <!-- Button to send message -->
+            <p> Company Phone Number: 513-234-3845</p>
+    </form>
+    </div>
+    </section>
+    </div>
+    </div> 
+    </body>
+    </html>
