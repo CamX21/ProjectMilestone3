@@ -1,49 +1,107 @@
-
+/* Overall page design */
 body {
-    font-family: Arial, sans-serif; 
-    margin: 0; 
-    padding: 0;                  /* design for  whole page */
-    background-color: white; 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0; /* Design for whole page */
+    background-color: #f9f9f9;
     color: black;
 }
+
 .container {
-    display: flex; 
-    height: 100vh; /* container for layout */
+    display: flex;
+    height: 100vh;      /* Container */
+    flex-direction: column;
 }
+
 .sidebar {
-    background-color: red; 
-    color: white; 
-    width: 200px;               /* Sidebar design */
-    padding: 20px; 
-    box-sizing: border-box; 
-    position: fixed; 
+    background-color: #b30000;
+    color: white;
+    width: 220px; /* Sidebar design */
+    padding: 20px;
+    box-sizing: border-box;
+    position: fixed;
     height: 100%;
+    overflow-y: auto;
 }
+
 .sidebar ul li {
     margin-bottom: 20px; /* Adds space below each navigation link */
 }
+
 .sidebar ul li a {
-    text-decoration: none; 
-    color: white;   /* design for links in the sidebar */
-    font-size: 18px; 
-    display: block; 
+    text-decoration: none;
+    color: white; /* Design for links in the sidebar */
+    font-size: 18px;
+    display: block;
+    transition: color 0.3s;
 }
+
+.sidebar ul li a:hover {
+    color: #ffe0e0; /* Subtle color change on hover */
+}
+
 .main-content {
-    margin-left: 220px; 
-    padding: 20px;                /* Main content styling */
-    background-color: white; 
+    margin-left: 240px;
+    padding: 20px; /* Main content styling */
+    background-color: #fff;
 }
+
 header h1 {
-    font-size: 36px; 
-    color: blue;     /* design for the header in the main content */
+    font-size: 36px;
+    color: #003366; /* Design for the header in the main content */
+    text-shadow: 1px 1px 2px #999;
 }
+
 section {
     margin-top: 20px; /* Adds space above each section */
 }
+
 section h2 {
-    color: black; /* Sets the color of section headings to black */
+    color: #333; /* Sets the color of section headings */
+    border-bottom: 2px solid #003366;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
 }
+
 section p {
-    font-size: 18px;    /* design for paragraphs */
-    line-height: 1.6; 
+    font-size: 18px; /* Design for paragraphs */
+    line-height: 1.6;
 }
+
+
+.form-container {
+    max-width: 500px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f1f1f1;   /* design for the form elements */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+    font-weight: bold;    /* Makes form labels bold */
+    color: #333;
+}
+
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 10px;                   /* design for text input fields */
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;                      /* Submit button design */
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+
