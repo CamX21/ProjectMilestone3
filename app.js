@@ -1,27 +1,17 @@
-
-const express = require('express');
+const express = require('express'); 
 const app = express();
-const port = 3000;
+const port = 3000; // port address
 
-// Middleware to parse form data
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ extended: true })); // This makes sure the server can read data sent from forms when a user submits them.
+app.use(express.static(__dirname)); // This lets the server send files to the browser.
 
-// Serve HTML files and static assets (like CSS and JS)
-app.use(express.static(__dirname));
-
-// Serve the Contact page
-app.get('/contactinfo.html', (req, res) => {
-  res.sendFile(__dirname + '/contactinfo.html');
+app.get('/contactinfo.html', (req, res) => {                // the Contact page
+  res.sendFile(__dirname + '/contactinfo.html');   // When someone visits this page, the server sends back the HTML file 
 });
-
-// Handle form submissions
-app.post('/submit-form', (req, res) => {
-  const { name, message } = req.body;
-  console.log(`got a new message from ${name}: ${message}`);
-  res.send(`Thank you, ${name}! Your message has been received.`);
+app.post('/submit-form', (req, res) => {   // Handle form submissions
+  const { name, message } = req.body;   // Gets the user's name and message from the form they submitted.
+   res.send(`Thank you, ${name}! Your message has been received.`);    // Sends a "thank you" message back to the user after they submit the form.
 });
-
-// Start the server
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+app.listen(port, () => {  // Start the server
+  console.log(`Server running on http://localhost:${port}`);     // Starts the server so users can open the site in their browser at this address.
 });
